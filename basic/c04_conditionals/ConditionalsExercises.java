@@ -82,22 +82,36 @@ public class ConditionalsExercises {
         if (edad >= 15) {
             System.out.println("Puedes entrar al cine");
         } else {
-            System.out.print("No puedes ir al cine solo, te tiene que acompañar un adulto");
+            System.out.println("No puedes ir al cine solo, te tiene que acompañar un adulto");
         }
         // 9. Crea un programa que diga si una letra es vocal o consonante.
-                char letra = 'E'; // Comillas simples y punto y coma
-                letra = Character.toLowerCase(letra); // Convertimos a minúscula
-
-                if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
-                    System.out.println("Es una vocal");
-                } else if (letra >= 'a' && letra <= 'z') {
-                    System.out.println("Es una consonante");
-                } else {
-                    System.out.println("No es una letra válida");
-                }
-
-
+        char letra = 'E';
+        letra = Character.toLowerCase(letra);
+        if (letra != 'a' && letra != 'e' && letra != 'i' && letra != 'o' && letra != 'u') {
+            if (letra >= 'a' && letra <= 'z') {
+                System.out.println("Es una consonante");
+            } else {
+                System.out.println("No es una letra válida");
+            }
+        } else {
+            System.out.println("Es una vocal");
+        }
         // 10. Usa tres variables a, b, c y muestra cuál es el mayor de las tres.
+        int a = 7;
+        int b = 12;
+        int c = 5;
+
+        if (a >= b && a >= c) {
+            System.out.println("El mayor es a: " + a);
+        } else if (b >= a && b >= c) {
+            System.out.println("El mayor es b: " + b);
+        } else {
+            System.out.println("El mayor es c: " + c);
+        }
+        // Otra forma de resolver el Ejercicio 10:
+        int mayor = Math.max(a, Math.max(b, c));
+        System.out.println("El mayor es: " + mayor);
+
 
     }
 }
